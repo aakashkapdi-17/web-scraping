@@ -7,6 +7,9 @@ import scrapy
 
 
 class YelpscraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    City = scrapy.Field()
+    Business_Name= scrapy.Field()
+    Business_Primary_Category= scrapy.Field()
+    Business_Address_Line1 = scrapy.Field()
+    Business_Address_Line2 = scrapy.Field()
+    Phone = scrapy.Field()

@@ -1,4 +1,4 @@
-# Scrapy settings for yelpScraper project
+# Scrapy settings for classCentral project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,19 +7,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "yelpScraper"
+BOT_NAME = "classCentral"
 
-SPIDER_MODULES = ["yelpScraper.spiders"]
-NEWSPIDER_MODULE = "yelpScraper.spiders"
+SPIDER_MODULES = ["classCentral.spiders"]
+NEWSPIDER_MODULE = "classCentral.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "yelpScraper (+http://www.yourdomain.com)"
+#USER_AGENT = "classCentral (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-
-PROXY_POOL_ENABLED = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,16 +45,14 @@ PROXY_POOL_ENABLED = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "yelpScraper.middlewares.YelpscraperSpiderMiddleware": 543,
+#    "classCentral.middlewares.ClasscentralSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-#   "yelpScraper.middlewares.YelpscraperDownloaderMiddleware": 543,
-    'scrapy_proxy_pool.middlewares.ProxyPoolMiddleware': 610,
-    'scrapy_proxy_pool.middlewares.BanDetectionMiddleware': 620,
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    "classCentral.middlewares.ClasscentralDownloaderMiddleware": 543,
+#}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -67,7 +63,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "yelpScraper.pipelines.YelpscraperPipeline": 300,
+#    "classCentral.pipelines.ClasscentralPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -95,7 +91,3 @@ DOWNLOADER_MIDDLEWARES = {
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
-
-FEEDS = {
-    'data.csv': {'format': 'csv'}
-}
